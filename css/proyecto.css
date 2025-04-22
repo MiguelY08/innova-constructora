@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* NAV FIJO */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: orange;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav h1 {
+    font-size: 1.5em;
+}
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav a:hover{
+    color: black;
+}   
+.nav a img{
+    width: 50px;
+    margin-right: 50px;
+}
+.nav img:hover{
+    transform: scale(1.2);
+}
+.logo img{
+    width: 150px;
+}
+body {
+    padding-top: 150px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Sección Proyectos */
+.proyectos-cards h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Card base */
+.card {
+    perspective: 1000px;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Frontal y trasera */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Frente */
+.card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-front img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.card-front h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Detrás */
+.card-back {
+    background-color: #333;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.card-back p {
+    font-size: 0.95em;
+    margin: 5px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .footer-links a,
+  .footer-contact p {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .footer-links a:hover,
+  .footer-contact p:hover {
+    color: #f7b731;
+  }
+  
+  .footer-social a img {
+    width: 34px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaa;
+  }
+/* Estilos para tablets y pantallas medianas */
+@media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  
+    .logo img {
+      width: 100px;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      padding: 10px;
+    }
+  
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+  
+  /* Estilos para móviles */
+  @media (max-width: 480px) {
+    .nav {
+      flex-direction: column;
+      height: auto;
+      padding: 15px 10px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .logo img {
+      width: 80px;
+    }
+  
+    .cards-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .card-inner {
+      height: 300px;
+    }
+  
+    .card-front img {
+      height: 200px;
+    }
+  
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .footer-social a img {
+      margin: 5px;
+    }
+  }
+  

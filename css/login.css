@@ -1,0 +1,247 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* NAV FIJO */
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    background-color: orange;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+.nav h1 {
+    font-size: 1.5em;
+}
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav a img{
+    width: 50px;
+    margin-right: 50px;
+}
+.nav img:hover{
+    transform: scale(1.2);
+}
+.nav a:hover{
+    color: black;
+}
+.logo img{
+    width: 150px;
+}
+/* Espacio bajo nav */
+body {
+    padding-top: 150px;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título del formulario */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Estilo para cada grupo de entrada */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #ffa500; 
+}
+
+/* Botón de inicio de sesión */
+.login-container{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 600px;
+}
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #e67e00; 
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #ffa500;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+/* Footer */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .footer-links a,
+  .footer-contact p {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-social h4 {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .footer-links a:hover,
+  .footer-contact p:hover {
+    color: #f7b731;
+  }
+  
+  .footer-social a img {
+    width: 34px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+      padding: 20px 10px;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .logo img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  
+    .login-container {
+      margin: 40px auto;
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .footer-logo img {
+      margin: auto;
+    }
+  
+    .footer-social a img {
+      margin: 5px;
+    }
+  }
+  
